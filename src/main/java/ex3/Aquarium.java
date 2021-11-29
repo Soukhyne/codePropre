@@ -8,10 +8,10 @@ public class Aquarium {
 	private List<String> noms;
 	private List<String> comportements;
 	
-	public void addAnimal(String typeAnimal, String nomAnimal, String comportement) {
-		types.add(typeAnimal);
-		noms.add(nomAnimal);
-		comportements.add(comportement);
+	public void addAnimal(Poisson poisson) {
+		types.add(poisson.getTypes());
+		noms.add(poisson.getNoms());
+		comportements.add(poisson.getComportements());
 	}
 	
 	public void afficherListeAnimaux(){

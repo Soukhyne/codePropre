@@ -12,8 +12,8 @@ public class Zoo {
 		this.nom = nom;
 	}
 	
-	public void addAnimal(String nomAnimal, String typeAnimal, String comportement){
-		if (typeAnimal.equals("MAMMIFERE") && comportement.equals("CARNIVORE")){
+	/*public void addAnimal(Animal animal){
+		if (animal.getClass() == Carnivore){
 			zoneCarnivore.addAnimal(typeAnimal, nomAnimal, comportement);
 		}
 		else if (typeAnimal.equals("MAMMIFERE") && comportement.equals("HERBIVORE")){
@@ -25,7 +25,25 @@ public class Zoo {
 		else if (typeAnimal.equals("POISSON")){
 			aquarium.addAnimal(typeAnimal, nomAnimal, comportement);
 		}
+	}*/
+	
+	public void addCarnivore(Carnivore carnivore) {
+		zoneCarnivore.addAnimal(carnivore);
 	}
+	
+	public void addHerbivore(Herbivore herbivore) {
+		savaneAfricaine.addAnimal(herbivore);
+	}
+	
+	public void addReptile(Reptile reptile) {
+		fermeReptile.addAnimal(reptile);
+	}
+	
+	public void addPoisson(Poisson poisson) {
+		aquarium.addAnimal(poisson);
+	}
+	
+	
 	
 	public void afficherListeAnimaux(){
 		savaneAfricaine.afficherListeAnimaux();

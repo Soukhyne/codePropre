@@ -8,10 +8,10 @@ public class FermeReptile {
 	private List<String> noms;
 	private List<String> comportements;
 	
-	public void addAnimal(String typeAnimal, String nomAnimal, String comportement) {
-		types.add(typeAnimal);
-		noms.add(nomAnimal);
-		comportements.add(comportement);
+	public void addAnimal(Reptile reptile) {
+		types.add(reptile.getTypes());
+		noms.add(reptile.getNoms());
+		comportements.add(reptile.getComportements());
 	}
 	
 	public void afficherListeAnimaux(){
